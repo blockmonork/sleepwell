@@ -1,0 +1,108 @@
+html, body{
+	margin:0;
+	padding:0;
+}
+h1 {
+	font-weight:lighter;
+	text-align:center;
+}
+hr {
+	height:5px;
+	border-top:1px dotted grey;
+	border-right:0;
+	border-left:0;
+	border-bottom:0;
+	width:50%;
+	margin:0 auto;
+	width:550px;
+}
+#body {
+	margin:0 auto;
+	width:90%;
+	border:1px solid grey;
+	display:block;
+	text-align:center;
+}
+.bt {
+	cursor:pointer;
+	padding:5px;
+	border:1px solid silver;
+	border-radius:5px;
+	background:#efefef;
+	margin:5px;
+	display:inline-block;
+	color:grey;
+	text-decoration:none;
+}
+select {
+	padding:5px;
+	border:1px solid grey;
+}
+.bt:hover{
+	background:silver;
+	border:1px solid grey;
+}
+.miniBox {
+	max-width:80%;
+	margin:10px auto;
+	padding:15px;
+	border:1px solid grey;
+	box-shadow:2px 2px 2px silver;
+}
+.miniBox span{
+	line-height:50px;
+}
+.miniBox a {
+	border:1px solid silver;
+	padding:5px;
+	color:grey;
+	text-decoration:none;
+}
+.miniBox a:hover{
+	background:silver;
+}
+/*hexchar:https://stackoverflow.com/questions/7240520/can-you-use-html-entities-in-the-css-content-property */
+.miniBox span:before{
+	content:"\2022   "
+}
+.alert{
+	background:red !important;
+	color:white !important;
+	font-weight:bold !important;
+}
+.oculto{
+	display:none;
+}
+#bb {
+	width:100%;
+	height:100%;
+	margin:0;
+	padding:0;
+	display:block;
+	position:fixed;
+	z-index:1111;
+	top:0;
+	left:0;
+	background:#000000 !important;
+}
+#bbb{
+	color:white;
+	font-size:2em;
+	text-align:center;
+	cursor:pointer;
+}
+
+@media only screen and (max-width: 640px){
+	.miniBox a {
+		display:block !important;
+		margin:10px !important;
+	}
+	hr {
+		width:25% !important;
+	}
+	input[type=time]{
+		padding:5px !important;
+		margin:5px !important;
+		font-size:1.3em !important;
+	}
+}
