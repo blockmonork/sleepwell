@@ -84,7 +84,8 @@ var thePlayer = {
 		if ( t.length == 8 ){
 			if ( IS_IFRAME ){
 				const ifr = document.querySelector('iframe');
-				ifr.src = ifr.src + '?start='+this._timeToSecs(t)
+				let ts = ifr.src;
+				ifr.src = ts.split('?')[0] + '?start='+this._timeToSecs(t)
 			}else{
 				this.O.currentTime = this._timeToSecs(t);
 			}
