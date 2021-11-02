@@ -2,7 +2,7 @@
 /*
  * player fafm
  * 
- * vs 2021.11.01 - goto time option now affects youtube iframe
+ * vs 2021.11.01 - goto time option now affects youtube iframe + show file names better
  * 
  * vs 2021.10.09 - added go to time option
  * 
@@ -107,8 +107,9 @@ $js_player = false;
 					$arquivo = trim($e[0]);
 					$dir = trim($e[1]);
 					if ( file_exists($dir . '/' . $arquivo) ){
+						$fsname = format_show_name($arquivo);
 						echo "<div class='miniBox alert'>"
-							. "<p>excluir arquivo $arquivo ?<br></p>"
+							. "<p>excluir arquivo $fsname ?<br></p>"
 							. "<a href='?option=DelF&fn=$fn'>sim</a> "
 							. "<a href='?option=ver'>NAO</a>"
 							. "</div>";
@@ -203,7 +204,7 @@ function soma($p){
 			: false;
 		},
 	);
-$SIS['functions']('texto', array('fAfMpLaYeR.v.') ).'&nbsp;'.$SIS['functions']('soma', array(3, 2) );
+$SIS['functions']('texto', array('fAfMpLaYeR.v.') ).'&nbsp;'.$SIS['functions']('soma', array(3, 3) );
 
 		?>		
 	</div>

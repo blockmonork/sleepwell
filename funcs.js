@@ -60,8 +60,11 @@ var thePlayer = {
 		var v = this.O.getAttribute(propName);
 		return ( typeof v == null || typeof v == undefined ) ? 0 : v;
 	},
+	_formatShowName: function(name){
+		return name.toString().replace(/[\-,\_\.]/g, ' ');
+	},
 	debug : function(){
-		_g('debug').innerHTML = "thePlayer.debug = tipo: " + this.tipo + ', src=' + this.src + ', last_pos:'+this.last_pos + ', this.curtime:' + this.O.currentTime;
+		_g('debug').innerHTML = "thePlayer.debug = tipo: " + this.tipo + ', src=' + this._formatShowName(this.src) + ', last_pos:'+this.last_pos + ', this.curtime:' + this.O.currentTime;
 	},
 	_timeToSecs: function(strTime){
 		var e = strTime.split(':');

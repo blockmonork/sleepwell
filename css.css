@@ -1,6 +1,7 @@
 html, body{
 	margin:0;
 	padding:0;
+	background-color: #efefef;
 }
 h1 {
 	font-weight:lighter;
@@ -32,7 +33,21 @@ hr {
 	margin:5px;
 	display:inline-block;
 	color:grey;
+	text-shadow: 1px 1px 0px white;
 	text-decoration:none;
+}
+.edit{
+	background-color: aqua;
+}
+.delete{
+	background-color: red;
+}
+.play{
+	background-color: green;
+}
+.edit, .delete, .play{
+	color:#000000 !important;
+	text-shadow: 1px 1px 0px white;
 }
 select {
 	padding:5px;
@@ -41,6 +56,7 @@ select {
 .bt:hover{
 	background:silver;
 	border:1px solid grey;
+	color: black;
 }
 .miniBox {
 	max-width:80%;

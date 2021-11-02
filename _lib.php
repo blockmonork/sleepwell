@@ -267,11 +267,12 @@ function show_files($what){
 			$o1 = '?option=edtF&fn='.$fn;
 			$o2 = '?option=delF&fn='.$fn;
 			$o3 = '?option=play&fn='.$fn;
-			echo "<div class='miniBox'><span>$fileName - last position: $last_pos </span>"
+			$fsname = format_show_name($fileName);
+			echo "<div class='miniBox'><span>$fsname - last position: $last_pos </span>"
 				. "<br>"
-				. "<a href='$o1'>editar info</a>"
-				. "<a href='$o2'>remover arquivo</a>"
-				. "<a href='$o3'>PLAY</a>"
+				. "<a class='bt edit' href='$o1'>Edit</a>"
+				. "<a class='bt delete' href='$o2'>Remove</a>"
+				. "<a class='bt play' href='$o3'>PLAY</a>"
 				. "</div>";
 		}
 	}
@@ -401,6 +402,14 @@ var PLAYLIST_TOTAL_VIDS = $pl_total_vids
 <div id='playlistShowTime'></div>
 ";	
 
+}
+
+function format_show_name($name){
+	$name = str_replace('_', ' ', $name);
+	$name = str_replace('-', ' ', $name);
+	$name = str_replace('.', ' ', $name);
+	$name = str_replace('  ', ' ', $name);
+	return $name;
 }
 
 function get_string_between($string, $a, $b){
